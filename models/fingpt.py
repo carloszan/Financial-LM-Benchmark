@@ -2,7 +2,6 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 from peft import PeftModel
 
-
 class FinGpt:
     def __init__(self):
         self.device = "cuda:0" if torch.cuda.is_available() else "cpu"

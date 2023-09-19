@@ -1,7 +1,7 @@
 import pandas as pd
 from tqdm import tqdm
 import pickle
-from fingpt import FinGpt
+from ..models import FinGpt
 
 finGpt = FinGpt()
 print()
