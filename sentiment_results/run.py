@@ -1,7 +1,7 @@
 import pandas as pd
 from tqdm import tqdm
 import pickle
-from ..models import FinGpt
+from fingpt import FinGpt
 
 finGpt = FinGpt()
 print()
@@ -22,7 +22,7 @@ def get_gpt_res(sentence):
     return response
 
 def save_dict(dic):
-    with open(f"res/missing.pkl","wb") as f:
+    with open(f"res/missing_2091.pkl","wb") as f:
         pickle.dump(dic,f)
 
 
@@ -33,7 +33,7 @@ for sentence in sentences:
     res = get_gpt_res(sentence)
     res_dict[sentence] = res
     
-    if evo % 1000 == 0:
+    if evo % 100 == 0:
         save_dict(res_dict)
 
     evo += 1
